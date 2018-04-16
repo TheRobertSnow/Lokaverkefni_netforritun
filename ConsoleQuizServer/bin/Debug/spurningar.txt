@@ -1,2 +1,2 @@
-1. Er thessi spurning rett?;a.) Ja b.) Nei c.) Veit thad ekki;a.)
-2. Hver er hofudborg Islands?;a.) Akureyri b.) Egilsstadir c.) Reykjavik;c.)
+1. Er thessi spurning rett?;1.) Ja;2.) Nei;3.) Veit thad ekki;1
+2. Hver er hofudborg Islands?;1.)Akureyri;2.) Egilsstadir;3.) Reykjavik;3
