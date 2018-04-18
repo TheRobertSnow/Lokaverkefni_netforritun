@@ -5,3 +5,9 @@ C:\Users\2512982709\Desktop\lokaverkefni\ConsoleQuizServer\bin\Debug\ConsoleQuiz
 C:\Users\2512982709\Desktop\lokaverkefni\ConsoleQuizServer\obj\Debug\ConsoleQuizServer.csprojResolveAssemblyReference.cache
 C:\Users\2512982709\Desktop\lokaverkefni\ConsoleQuizServer\obj\Debug\ConsoleQuizServer.exe
 C:\Users\2512982709\Desktop\lokaverkefni\ConsoleQuizServer\obj\Debug\ConsoleQuizServer.pdb
+C:\Users\2512982709\Documents\GitHub\Lokaverkefni_netforritun\ConsoleQuizServer\bin\Debug\ConsoleQuizServer.exe.config
+C:\Users\2512982709\Documents\GitHub\Lokaverkefni_netforritun\ConsoleQuizServer\obj\Debug\ConsoleQuizServer.exe
+C:\Users\2512982709\Documents\GitHub\Lokaverkefni_netforritun\ConsoleQuizServer\obj\Debug\ConsoleQuizServer.pdb
+C:\Users\2512982709\Documents\GitHub\Lokaverkefni_netforritun\ConsoleQuizServer\bin\Debug\ConsoleQuizServer.exe
+C:\Users\2512982709\Documents\GitHub\Lokaverkefni_netforritun\ConsoleQuizServer\bin\Debug\ConsoleQuizServer.pdb
+C:\Users\2512982709\Documents\GitHub\Lokaverkefni_netforritun\ConsoleQuizServer\obj\Debug\ConsoleQuizServer.csprojResolveAssemblyReference.cache

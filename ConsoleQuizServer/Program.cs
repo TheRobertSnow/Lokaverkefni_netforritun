@@ -14,17 +14,19 @@ namespace ConsoleQuizServer
 
         public struct Spurning
         {
-            public string spurning, valmoguleikar, rettsvar;
+            public string spurning, valmoguleikiA, valmoguleikiB, valmoguleikiC, rettsvar;
 
-            public Spurning(string sprng, string val, string rett)
+            public Spurning(string sprng, string valA, string valB, string valC, string rett)
             {
                 spurning = sprng;
-                valmoguleikar = val;
+                valmoguleikiA = valA;
+                valmoguleikiB = valB;
+                valmoguleikiC = valC;
                 rettsvar = rett;
             }
             public override string ToString()
             {
-                return spurning + ";" + valmoguleikar + ";" + rettsvar; 
+                return spurning + ";" + valmoguleikiA + ";" + valmoguleikiB + ";" + valmoguleikiC + ";" + rettsvar; 
             }
         }
 
@@ -45,8 +47,9 @@ namespace ConsoleQuizServer
             {
                 while((line = sr.ReadLine()) != null)
                 {
-                    Console.WriteLine(line);
-                    spurningar[indx] = new Spurning(line.Substring(0, 5), line.Substring(6, 3), line.Substring(10));
+                    //Console.WriteLine(line);                   
+                    string[] split = line.Split(';');
+                    spurningar[indx] = new Spurning(split[0],split[1],split[2],split[3],split[4]);
                     indx++;
                 }
             }
@@ -63,6 +66,7 @@ namespace ConsoleQuizServer
             {
                 listener = new TcpListener(IPAddress.Any, port);
                 listener.Start();
+                //Console.WriteLine(spurningar[0]);
                 Console.WriteLine("Waiting for connection...");
 
                 while(!done)
@@ -95,8 +99,8 @@ namespace ConsoleQuizServer
                 writer = new BinaryWriter(socketStream);
                 writer.Write("Connection successful. \n");
                 string message = null;
-
-                //Spurninga dæmið hér
+                Console.WriteLine(spurningar[0].spurning);
+                
             }
             catch (Exception error)
             {
