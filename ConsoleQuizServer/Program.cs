@@ -14,19 +14,17 @@ namespace ConsoleQuizServer
 
         public struct Spurning
         {
-            public string spurning, valmoguleikiA, valmoguleikiB, valmoguleikiC, rettsvar;
+            public string spurning, valmoguleikar, rettsvar;
 
-            public Spurning(string sprng, string valA, string valB, string valC, string rett)
+            public Spurning(string sprng, string val, string rett)
             {
                 spurning = sprng;
-                valmoguleikiA = valA;
-                valmoguleikiB = valB;
-                valmoguleikiC = valC;
+                valmoguleikar = val;
                 rettsvar = rett;
             }
             public override string ToString()
             {
-                return spurning + ";" + valmoguleikiA + ";" + valmoguleikiB + ";" + valmoguleikiC + ";" + rettsvar; 
+                return spurning + ";" + valmoguleikar +";" + rettsvar; 
             }
         }
 
@@ -49,7 +47,7 @@ namespace ConsoleQuizServer
                 {
                     //Console.WriteLine(line);                   
                     string[] split = line.Split(';');
-                    spurningar[indx] = new Spurning(split[0],split[1],split[2],split[3],split[4]);
+                    spurningar[indx] = new Spurning(split[0],split[1],split[2]);
                     indx++;
                 }
             }
@@ -94,12 +92,28 @@ namespace ConsoleQuizServer
 
             try
             {
+                int rett = 0;
+                int rangt = 0;
                 socketStream = new NetworkStream(socket);
                 reader = new BinaryReader(socketStream);
                 writer = new BinaryWriter(socketStream);
                 writer.Write("Connection successful. \n");
                 string message = null;
-                Console.WriteLine(spurningar[0].spurning);
+                //Console.WriteLine(spurningar[0].spurning);
+
+                writer.Write(spurningar[0].spurning);
+                writer.Write(spurningar[0].valmoguleikar);
+                message = reader.ReadString();
+                if(message == spurningar[0].rettsvar)
+                {
+                    rett++;
+                    return;
+                }
+                else
+                {
+                    rangt++;
+                }
+                Console.WriteLine(rett + " | " + rangt);
                 
             }
             catch (Exception error)
