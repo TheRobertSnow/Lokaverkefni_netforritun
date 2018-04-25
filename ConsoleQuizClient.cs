@@ -6,7 +6,7 @@ using System.Threading;
 using System.Net.Sockets;
 using System.IO;
 
-namespace ConsoleQuizClient
+namespace ConsoleQuizClient //Breyta í project nafnið 
 {
     class Program
     {
